@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenside Paws - Your Pet Deserves Better Than Plastic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: '#97A68A',
+                        'deep-olive': '#6B705C',
+                        cream: '#F9F6F0',
+                        'warm-beige': '#E7DED1',
+                        'natural-brown': '#B5A58A',
+                        'soft-charcoal': '#3F3F3F',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+        .animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
+        .animate-delay-600 { animation-delay: 0.6s; opacity: 0; }
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hover-lift:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        .bg-paper {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOCIgbnVtT2N0YXZlcz0iNCI+PC9mZVR1cmJ1bGVuY2U+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCI+PC9mZUNvbG9yTWF0cml4PjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDMiPjwvcmVjdD48L3N2Zz4=');
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans text-soft-charcoal bg-white">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-warm-beige/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-5">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">🌿</span>
+                    <span class="font-display text-2xl font-bold text-deep-olive">Greenside Paws</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#guide" class="text-sm font-medium text-soft-charcoal hover:text-sage transition-colors">The Guide</a>
+                    <a href="#products" class="text-sm font-medium text-soft-charcoal hover:text-sage transition-colors">Products</a>
+                    <a href="#about" class="text-sm font-medium text-soft-charcoal hover:text-sage transition-colors">About</a>
+                    <a href="#faq" class="text-sm font-medium text-soft-charcoal hover:text-sage transition-colors">FAQ</a>
+                </nav>
+                <a href="#buy" class="bg-deep-olive text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-sage transition-all shadow-lg hover:shadow-xl">
+                    Get Guide - $9
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-cream py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left: Text Content -->
+                <div class="space-y-8 animate-fade-up">
+                    <div class="inline-block">
+                        <span class="bg-sage/15 text-deep-olive px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
+                            For Conscious Pet Parents
+                        </span>
+                    </div>
+                    
+                    <h1 class="font-display text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-deep-olive">
+                        Your Pet Deserves Better Than Plastic.
+                        <span class="block mt-3 text-soft-charcoal">Switch to Natural Products That Actually Keep Them Safe.</span>
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-soft-charcoal/80 leading-relaxed">
+                        Learn <strong class="text-deep-olive">21 simple upgrades</strong> to replace cheap, questionable pet gear with safer, natural alternatives your pet will thrive on.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-6 animate-fade-up animate-delay-200">
+                        <a href="#buy" class="group bg-deep-olive text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-sage transition-all inline-flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl">
+                            Get the $9 Natural Pet Parent Blueprint
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                        <a href="#products" class="bg-white border-2 border-sage text-sage px-10 py-5 rounded-full text-lg font-bold hover:bg-sage hover:text-white transition-all inline-flex items-center justify-center shadow-lg">
+                            Browse Natural Essentials
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-8 pt-6 animate-fade-up animate-delay-400">
+                        <div class="flex -space-x-3">
+                            <img src="/mnt/user-data/uploads/Testimonial__1_.PNG" alt="Pet parent" class="w-12 h-12 rounded-full border-3 border-white object-cover">
+                            <img src="/mnt/user-data/uploads/Testimonial__2_.PNG" alt="Pet parent" class="w-12 h-12 rounded-full border-3 border-white object-cover">
+                            <img src="/mnt/user-data/uploads/Testimonial__3_.PNG" alt="Pet parent" class="w-12 h-12 rounded-full border-3 border-white object-cover">
+                        </div>
+                        <p class="text-sm text-soft-charcoal/70">
+                            Join <strong class="text-deep-olive font-semibold">15,000+</strong> pet parents who made the switch
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right: Hero Image + Guide Mockup -->
+                <div class="relative animate-fade-up animate-delay-200">
+                    <div class="relative">
+                        <img src="/mnt/user-data/uploads/Hero_Image.png" alt="Happy dog in natural environment" class="rounded-3xl shadow-2xl w-full">
+                        <!-- Floating Guide Mockup -->
+                        <div class="absolute -bottom-8 -left-8 lg:-left-12 z-10 transform hover:scale-105 transition-transform duration-300">
+                            <img src="/mnt/user-data/uploads/Guide_Cover_Mockup.png" alt="Natural Pet Parent Blueprint Guide" class="w-64 lg:w-80 shadow-2xl rounded-lg">
+                        </div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute top-6 right-6 bg-deep-olive text-white px-6 py-3 rounded-full text-sm font-bold shadow-xl animate-fade-in animate-delay-600">
+                        Instant Digital Access
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Natural Product Lifestyle Gallery -->
+    <section class="py-20 bg-warm-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="hover-lift overflow-hidden rounded-2xl shadow-lg">
+                    <img src="/mnt/user-data/uploads/Bamboo_Bowl.png" alt="Natural bamboo pet bowl" class="w-full h-full object-cover">
+                </div>
+                <div class="hover-lift overflow-hidden rounded-2xl shadow-lg">
+                    <img src="/mnt/user-data/uploads/Upcylced_Leash.png" alt="Upcycled natural leash" class="w-full h-full object-cover">
+                </div>
+                <div class="hover-lift overflow-hidden rounded-2xl shadow-lg">
+                    <img src="/mnt/user-data/uploads/Natural_Rubber_Toy.png" alt="Natural rubber pet toy" class="w-full h-full object-cover">
+                </div>
+                <div class="hover-lift overflow-hidden rounded-2xl shadow-lg">
+                    <img src="/mnt/user-data/uploads/Bamboo_Grooming_Brush.png" alt="Natural grooming brush" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inside The Blueprint Section -->
+    <section id="guide" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <span class="text-sage font-semibold uppercase tracking-wider text-sm">What You'll Discover</span>
+                <h2 class="font-display text-5xl lg:text-6xl font-bold mt-4 mb-6 text-deep-olive">Inside The Natural Pet Parent Blueprint</h2>
+                <p class="text-xl text-soft-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+                    Simple, actionable upgrades to create a cleaner, safer, more natural home for your beloved companion.
+                </p>
+            </div>
+
+            <!-- Guide Preview Images -->
+            <div class="relative max-w-4xl mx-auto mb-16 animate-fade-up animate-delay-200">
+                <img src="/mnt/user-data/uploads/Page_Preview_Mockups.png" alt="Guide page previews" class="w-full shadow-2xl rounded-xl">
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <div class="bg-cream rounded-2xl p-8 hover-lift animate-fade-up">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3 text-deep-olive">21 Natural Upgrades</h3>
+                    <p class="text-soft-charcoal/70 leading-relaxed">
+                        Step-by-step swaps for bowls, toys, leashes, walk gear, grooming tools & waste solutions—all natural materials.
+                    </p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 hover-lift animate-fade-up animate-delay-200">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3 text-deep-olive">Spot Toxic Materials</h3>
+                    <p class="text-soft-charcoal/70 leading-relaxed">
+                        Learn exactly what to avoid in pet products and how to identify truly safe, natural alternatives that last.
+                    </p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 hover-lift animate-fade-up animate-delay-400">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3 text-deep-olive">Curated Product Links</h3>
+                    <p class="text-soft-charcoal/70 leading-relaxed">
+                        Direct links to vetted natural products—bamboo, stainless steel, natural rubber, upcycled materials & more.
+                    </p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 hover-lift animate-fade-up">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3 text-deep-olive">Budget-Friendly Choices</h3>
+                    <p class="text-soft-charcoal/70 leading-relaxed">
+                        Natural doesn't mean expensive. Discover durable products that save you money in the long run.
+                    </p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 hover-lift animate-fade-up animate-delay-200">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3 text-deep-olive">Printable Checklists</h3>
+                    <p class="text-soft-charcoal/70 leading-relaxed">
+                        Easy-to-use shopping lists and tracking sheets to implement changes at your own comfortable pace.
+                    </p>
+                </div>
+
+                <div class="bg-cream rounded-2xl p-8 hover-lift animate-fade-up animate-delay-400">
+                    <div class="w-16 h-16 bg-sage/20 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-3xl">🐕🐈</span>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-3 text-deep-olive">Dogs & Cats Covered</h3>
+                    <p class="text-soft-charcoal/70 leading-relaxed">
+                        Comprehensive guidance for both canine and feline companions—everything in one complete guide.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center animate-fade-up animate-delay-600">
+                <a href="#buy" class="inline-flex items-center gap-3 bg-deep-olive text-white px-12 py-6 rounded-full text-xl font-bold hover:bg-sage transition-all shadow-2xl hover:shadow-3xl">
+                    Get Instant Access - $9
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before You Switch Checklist -->
+    <section class="py-24 bg-warm-beige bg-paper">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-fade-up">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6 text-deep-olive">Before You Switch...</h2>
+                <p class="text-xl text-soft-charcoal/70">Quick checks that reveal if it's time to upgrade your pet's essentials</p>
+            </div>
+
+            <div class="bg-white rounded-3xl p-10 lg:p-12 shadow-xl">
+                <div class="space-y-6">
+                    <div class="flex items-start gap-5 p-6 bg-cream rounded-2xl hover-lift">
+                        <div class="flex-shrink-0 w-8 h-8 bg-sage/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-deep-olive">Check if your pet's bowl is scratched or discolored</h4>
+                            <p class="text-soft-charcoal/70">Damaged plastic leaches chemicals directly into food and water</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5 p-6 bg-cream rounded-2xl hover-lift">
+                        <div class="flex-shrink-0 w-8 h-8 bg-sage/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-deep-olive">Check if toys smell strongly of chemicals</h4>
+                            <p class="text-soft-charcoal/70">That "new toy smell" is often toxic off-gassing from synthetic materials</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5 p-6 bg-cream rounded-2xl hover-lift">
+                        <div class="flex-shrink-0 w-8 h-8 bg-sage/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-deep-olive">Check for frayed or synthetic leashes</h4>
+                            <p class="text-soft-charcoal/70">Cheap nylon irritates paws and hands—natural fibers feel better and last longer</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5 p-6 bg-cream rounded-2xl hover-lift">
+                        <div class="flex-shrink-0 w-8 h-8 bg-sage/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-deep-olive">Check your grooming tools for irritation risks</h4>
+                            <p class="text-soft-charcoal/70">Synthetic brushes can cause static and skin irritation—natural bristles are gentler</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5 p-6 bg-cream rounded-2xl hover-lift">
+                        <div class="flex-shrink-0 w-8 h-8 bg-sage/20 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-deep-olive">Check if poop bags are petroleum-based</h4>
+                            <p class="text-soft-charcoal/70">Most "biodegradable" bags take centuries—true compostable bags break down in months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Natural Pet Essentials (Affiliate Products) -->
+    <section id="products" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <span class="text-sage font-semibold uppercase tracking-wider text-sm">Curated by Greenside Paws</span>
+                <h2 class="font-display text-5xl lg:text-6xl font-bold mt-4 mb-6 text-deep-olive">Natural Pet Essentials</h2>
+                <p class="text-xl text-soft-charcoal/70 max-w-3xl mx-auto">
+                    Hand-picked products featuring natural, sustainable materials that actually work for real pets.
+                </p>
+            </div>
+
+            <div id="product-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Products rendered by JavaScript -->
+            </div>
+
+            <div class="text-center mt-12 text-soft-charcoal/60 text-sm">
+                <p>💚 These are affiliate recommendations. We earn a small commission at no extra cost to you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <span class="text-sage font-semibold uppercase tracking-wider text-sm">Real Stories</span>
+                <h2 class="font-display text-5xl lg:text-6xl font-bold mt-4 mb-6 text-deep-olive">What Pet Parents Are Saying</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover-lift animate-fade-up">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="/mnt/user-data/uploads/Testimonial__1_.PNG" alt="Jessica" class="w-16 h-16 rounded-full object-cover border-3 border-sage/20">
+                        <div>
+                            <h4 class="font-bold text-lg text-deep-olive">Jessica M.</h4>
+                            <div class="text-sage text-xl">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-soft-charcoal/80 leading-relaxed italic">
+                        "I used to feel so guilty about all the plastic. Greenside Paws made it SO easy—the compostable bags work better than regular ones, and my Cycle Dog leash is indestructible. Reduced waste by 80%!"
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover-lift animate-fade-up animate-delay-200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="/mnt/user-data/uploads/Testimonial__2_.PNG" alt="David" class="w-16 h-16 rounded-full object-cover border-3 border-sage/20">
+                        <div>
+                            <h4 class="font-bold text-lg text-deep-olive">David K.</h4>
+                            <div class="text-sage text-xl">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-soft-charcoal/80 leading-relaxed italic">
+                        "The $9 Blueprint was a game-changer. I thought eco-friendly would be expensive, but the guide showed me swaps that SAVED money. My cat loves the new toys!"
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover-lift animate-fade-up animate-delay-400">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="/mnt/user-data/uploads/Testimonial__3_.PNG" alt="Amanda" class="w-16 h-16 rounded-full object-cover border-3 border-sage/20">
+                        <div>
+                            <h4 class="font-bold text-lg text-deep-olive">Amanda L.</h4>
+                            <div class="text-sage text-xl">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="text-soft-charcoal/80 leading-relaxed italic">
+                        "Living sustainably was missing one piece—my pets. Greenside Paws made it effortless. The bamboo bowls are gorgeous, and I love knowing every purchase reduces plastic waste."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Greenside Paws -->
+    <section id="about" class="py-24 bg-warm-beige bg-paper">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-fade-up">
+                <span class="text-6xl block mb-6">🌿</span>
+                <h2 class="font-display text-5xl font-bold mb-6 text-deep-olive">About Greenside Paws</h2>
+            </div>
+            
+            <div class="space-y-6 text-xl leading-relaxed text-soft-charcoal/80 animate-fade-up animate-delay-200">
+                <p>
+                    Greenside Paws started because pet parents are overwhelmed by cheap, questionable pet gear made with harsh plastics and synthetic materials. We were tired of wading through mystery ingredients and products that break after a month.
+                </p>
+                <p>
+                    The pet industry is flooded with products that prioritize profit over pet safety. As conscious pet parents ourselves, we wanted something better—products made from <strong class="text-deep-olive">natural materials like bamboo, stainless steel, natural rubber, and upcycled fabrics</strong>.
+                </p>
+                <p>
+                    Our mission is simple: help you cut through the noise and make smarter choices for your pet. That's why we created <em>The Natural Pet Parent Blueprint</em>—a straightforward guide with 21 simple upgrades to safer, more natural pet care. No overwhelm. Just clear, actionable steps.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <h2 class="font-display text-5xl font-bold mb-4 text-deep-olive">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-cream rounded-2xl overflow-hidden shadow-lg animate-fade-up">
+                    <button class="w-full text-left p-8 flex justify-between items-center font-semibold text-lg hover:bg-warm-beige/50 transition text-deep-olive" onclick="toggleFAQ(this)">
+                        <span>What makes a product "natural" in your recommendations?</span>
+                        <svg class="w-6 h-6 transform transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content px-8 pb-8 hidden">
+                        <p class="text-soft-charcoal/70 leading-relaxed">
+                            We focus on products made from materials like bamboo, stainless steel, natural rubber, wood, and upcycled fabrics. We avoid synthetic plastics, harsh chemicals, and artificial materials whenever possible. Each recommendation prioritizes safety, durability, and sustainability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-cream rounded-2xl overflow-hidden shadow-lg animate-fade-up animate-delay-200">
+                    <button class="w-full text-left p-8 flex justify-between items-center font-semibold text-lg hover:bg-warm-beige/50 transition text-deep-olive" onclick="toggleFAQ(this)">
+                        <span>Do I have to buy all the products in the guide?</span>
+                        <svg class="w-6 h-6 transform transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content px-8 pb-8 hidden">
+                        <p class="text-soft-charcoal/70 leading-relaxed">
+                            Absolutely not! The guide presents 21 upgrades you can pick and choose from based on your needs, budget, and priorities. Start with one or two swaps that make sense for you, and build from there at your own pace.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-cream rounded-2xl overflow-hidden shadow-lg animate-fade-up animate-delay-400">
+                    <button class="w-full text-left p-8 flex justify-between items-center font-semibold text-lg hover:bg-warm-beige/50 transition text-deep-olive" onclick="toggleFAQ(this)">
+                        <span>Is the guide for dogs, cats, or both?</span>
+                        <svg class="w-6 h-6 transform transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content px-8 pb-8 hidden">
+                        <p class="text-soft-charcoal/70 leading-relaxed">
+                            The guide covers natural alternatives for both dogs and cats! We include recommendations for bowls, toys, grooming tools, waste solutions, and walk gear that work for both species—clearly labeled throughout.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-cream rounded-2xl overflow-hidden shadow-lg animate-fade-up animate-delay-600">
+                    <button class="w-full text-left p-8 flex justify-between items-center font-semibold text-lg hover:bg-warm-beige/50 transition text-deep-olive" onclick="toggleFAQ(this)">
+                        <span>How do I receive the guide after purchase?</span>
+                        <svg class="w-6 h-6 transform transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content px-8 pb-8 hidden">
+                        <p class="text-soft-charcoal/70 leading-relaxed">
+                            After purchase, you'll receive instant access to download the guide as a PDF. You can read it on any device, print it out, or save it to your computer. It's yours to keep forever.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="buy" class="relative py-24 overflow-hidden">
+        <img src="/mnt/user-data/uploads/Sage_Gradient.png" alt="" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-br from-sage/95 to-deep-olive/95"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="animate-fade-up">
+                <h2 class="font-display text-5xl lg:text-6xl font-bold mb-6 text-white">
+                    Start Your Natural Pet Journey Today
+                </h2>
+                <p class="text-xl lg:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    Get instant access to 21 simple upgrades that make pet parenting safer, easier, and more sustainable.
+                </p>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-10 max-w-md mx-auto mb-12 border border-white/20">
+                    <div class="text-7xl font-display font-bold mb-3 text-white">$9</div>
+                    <p class="text-lg text-white/90">One-time payment • Instant PDF • Lifetime access</p>
+                </div>
+
+                <a href="#" class="inline-flex items-center gap-3 bg-white text-deep-olive px-14 py-7 rounded-full text-xl font-bold hover:bg-cream transition-all shadow-2xl hover:shadow-3xl mb-10">
+                    Get The Natural Pet Parent Blueprint Now
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+
+                <div class="flex flex-wrap items-center justify-center gap-8 text-sm text-white/90">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Instant Access
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Secure Checkout
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Money-Back Guarantee
+                    </span>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-white/20">
+                    <p class="text-lg mb-4 text-white/90">Or explore our recommended natural products:</p>
+                    <a href="#products" class="text-white underline hover:no-underline font-semibold text-lg">
+                        Browse Natural Essentials ↑
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-olive text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-4xl">🌿</span>
+                        <span class="font-display text-3xl font-bold">Greenside Paws</span>
+                    </div>
+                    <p class="text-white/70 leading-relaxed text-lg">
+                        Creating a healthier, more sustainable world for pets through natural, thoughtfully-curated products and education.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-lg">Quick Links</h3>
+                    <ul class="space-y-3 text-white/70">
+                        <li><a href="#guide" class="hover:text-white transition">The Guide</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Products</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                        <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4 text-lg">Legal</h3>
+                    <ul class="space-y-3 text-white/70">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/20 text-center text-white/60 text-sm">
+                <p>&copy; 2024 Greenside Paws (GreensidePaws.com). All rights reserved. Made with 💚 for pets & our planet.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product data
+        const products = [
+            {
+                name: "Compostable Poop Bags",
+                description: "Earth Rated bags that actually break down in 90 days, not 500 years.",
+                tags: ["Compostable", "Earth Rated"],
+                image: "/mnt/user-data/uploads/Bamboo_Bowl.png",
+                link: "#"
+            },
+            {
+                name: "Bamboo Feeding Bowl",
+                description: "Beco's sustainable bowls—stylish, durable, naturally antimicrobial.",
+                tags: ["Bamboo", "Sustainable"],
+                image: "/mnt/user-data/uploads/Bamboo_Bowl.png",
+                link: "#"
+            },
+            {
+                name: "Upcycled Dog Leash",
+                description: "Cycle Dog's premium leashes from recycled climbing rope & seatbelts.",
+                tags: ["Upcycled", "Durable"],
+                image: "/mnt/user-data/uploads/Upcylced_Leash.png",
+                link: "#"
+            },
+            {
+                name: "Upcycled Dog Collar",
+                description: "Cycle Dog collars from recycled materials—adventure-ready.",
+                tags: ["Upcycled", "Adjustable"],
+                image: "/mnt/user-data/uploads/Upcylced_Leash.png",
+                link: "#"
+            },
+            {
+                name: "Natural Rubber Toys",
+                description: "West Paw's Zogoflex® toys—100% recyclable, non-toxic, USA made.",
+                tags: ["Natural Rubber", "USA Made"],
+                image: "/mnt/user-data/uploads/Natural_Rubber_Toy.png",
+                link: "#"
+            },
+            {
+                name: "Recycled Plush Toys",
+                description: "P.L.A.Y. toys from recycled bottles—soft, safe, sustainable.",
+                tags: ["Recycled", "Eco-Friendly"],
+                image: "/mnt/user-data/uploads/Natural_Rubber_Toy.png",
+                link: "#"
+            },
+            {
+                name: "Natural Grooming Brush",
+                description: "Bamboo handle with natural bristles—gentle on coats & earth.",
+                tags: ["Bamboo", "Natural Bristles"],
+                image: "/mnt/user-data/uploads/Bamboo_Grooming_Brush.png",
+                link: "#"
+            },
+            {
+                name: "Outdoor Cat Enclosure",
+                description: "CatioSpaces plans for safe, natural outdoor enrichment.",
+                tags: ["For Cats", "DIY Plans"],
+                image: "/mnt/user-data/uploads/Catio.png",
+                link: "#"
+            }
+        ];
+
+        // Render products
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = products.map(product => `
+                <div class="bg-white border-2 border-warm-beige rounded-3xl overflow-hidden hover-lift">
+                    <div class="h-64 overflow-hidden bg-cream">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-2xl font-bold mb-3 text-deep-olive">${product.name}</h3>
+                        <p class="text-soft-charcoal/70 text-sm mb-4 leading-relaxed">${product.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            ${product.tags.map(tag => `
+                                <span class="bg-sage/15 text-sage text-xs px-3 py-1.5 rounded-full font-medium">${tag}</span>
+                            `).join('')}
+                        </div>
+                        <a href="${product.link}" class="block w-full bg-deep-olive text-white text-center py-4 rounded-full font-bold hover:bg-sage transition-all shadow-lg">
+                            View Product
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // FAQ toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            const isHidden = content.classList.contains('hidden');
+            
+            document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+            document.querySelectorAll('button svg').forEach(i => i.classList.remove('rotate-180'));
+            
+            if (isHidden) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Initialize
+        renderProducts();
+    </script>
+</body>
+</html>
