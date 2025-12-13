@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Natural Pet Parent Blueprint - Greenside Paws</title>
     <meta name="description" content="A thoughtful guide to recognizing quality, understanding brands, and choosing better products for the pets you love.">
+    
+    <!-- Payhip Integration -->
+    <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
@@ -59,6 +63,44 @@
                 opacity: 0.15;
             }
         }
+
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-answer.open {
+            max-height: 500px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-icon.rotate {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="font-sans text-soft-charcoal bg-white">
@@ -68,10 +110,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center gap-2">
-                    <span class="text-2xl">🌿</span>
+                    <img src="./images/Logo_Icon.png" alt="Greenside Paws" class="w-8 h-8">
                     <span class="font-display text-xl md:text-2xl font-bold text-deep-olive">Greenside Paws</span>
                 </div>
-                <a href="#buy" class="bg-sage text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm font-semibold hover:bg-deep-olive transition-all shadow-md hover:shadow-lg">
+                <a href="https://payhip.com/b/RL5vS" 
+                   class="payhip-buy-button bg-sage text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm font-semibold hover:bg-deep-olive transition-all shadow-md hover:shadow-lg" 
+                   data-theme="none" 
+                   data-product="RL5vS">
                     Get the $9 Guide
                 </a>
             </div>
@@ -86,7 +131,7 @@
         <!-- Hero Image as Background -->
         <div class="absolute inset-0 md:right-0 md:left-1/2">
             <img src="./images/Hero_Lifestyle.png" alt="Happy pet parent with dog" class="w-full h-full object-cover opacity-90">
-            <div class="absolute inset-0 bg-gradient-to-r from-cream via-cream/90 to-cream/60 md:from-cream md:via-cream/95 md:to-cream/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-cream via-cream/60 to-cream/30 md:from-cream md:via-cream/70 md:to-cream/20"></div>
         </div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
@@ -115,7 +160,7 @@
                             <svg class="w-4 h-4 md:w-5 md:h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
-                            21 pages
+                            28 pages
                         </span>
                         <span class="flex items-center gap-1">
                             <svg class="w-4 h-4 md:w-5 md:h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
@@ -133,7 +178,10 @@
                 </div>
                 
                 <div class="animate-fade-up animate-delay-600">
-                    <a href="#buy" class="group bg-deep-olive text-white px-10 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold hover:bg-sage transition-all inline-flex items-center justify-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105 w-full sm:w-auto">
+                    <a href="https://payhip.com/b/RL5vS" 
+                       class="payhip-buy-button group bg-deep-olive text-white px-10 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold hover:bg-sage transition-all inline-flex items-center justify-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105 w-full sm:w-auto" 
+                       data-theme="none" 
+                       data-product="RL5vS">
                         Get The Guide Now
                         <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -152,7 +200,7 @@
     <section class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+            <div class="text-center mb-12 md:mb-16 max-w-3xl mx-auto scroll-animate">
                 <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-deep-olive">
                     A Thoughtful Guide to Better Choices
                 </h2>
@@ -164,18 +212,18 @@
             <!-- Guide Showcase -->
             <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center mb-16 md:mb-20">
                 
-                <!-- Left: Multiple Guide Views -->
-                <div class="space-y-6 md:space-y-8">
-                    <img src="./images/Guide_Multiple_Views.png" alt="The Natural Pet Parent Blueprint from multiple angles" class="w-full shadow-2xl rounded-xl">
+                <!-- Left: Guide Images -->
+                <div class="space-y-6 md:space-y-8 scroll-animate">
+                    <img src="./images/Ebook_Cover.png" alt="The Natural Pet Parent Blueprint cover" class="w-full shadow-2xl rounded-xl">
                     
                     <div class="grid grid-cols-2 gap-4 md:gap-6">
-                        <img src="./images/Guide_In_Hands.png" alt="Guide being read" class="w-full rounded-xl shadow-lg">
+                        <img src="./images/Ebook_Flat_Lifestyle_Mockup.png" alt="Guide on tablet" class="w-full rounded-xl shadow-lg">
                         <img src="./images/Guide_Page_Detail.png" alt="Guide page detail" class="w-full rounded-xl shadow-lg">
                     </div>
                 </div>
 
                 <!-- Right: What You Learn -->
-                <div class="space-y-6 md:space-y-8">
+                <div class="space-y-6 md:space-y-8 scroll-animate">
                     <div>
                         <h3 class="font-display text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-deep-olive">What You'll Learn</h3>
                         <p class="text-base md:text-lg text-soft-charcoal/70 mb-6 md:mb-8">
@@ -186,7 +234,9 @@
                     <div class="space-y-5 md:space-y-6">
                         <div class="flex gap-3 md:gap-4">
                             <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-sage/15 rounded-xl flex items-center justify-center">
-                                <span class="text-xl md:text-2xl">🍽️</span>
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-base md:text-lg mb-1 text-deep-olive">Feeding Essentials</h4>
@@ -196,7 +246,9 @@
 
                         <div class="flex gap-3 md:gap-4">
                             <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-sage/15 rounded-xl flex items-center justify-center">
-                                <span class="text-xl md:text-2xl">🐕</span>
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-base md:text-lg mb-1 text-deep-olive">Walk Gear</h4>
@@ -206,7 +258,9 @@
 
                         <div class="flex gap-3 md:gap-4">
                             <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-sage/15 rounded-xl flex items-center justify-center">
-                                <span class="text-xl md:text-2xl">🎾</span>
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-base md:text-lg mb-1 text-deep-olive">Play & Enrichment</h4>
@@ -216,7 +270,9 @@
 
                         <div class="flex gap-3 md:gap-4">
                             <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-sage/15 rounded-xl flex items-center justify-center">
-                                <span class="text-xl md:text-2xl">✨</span>
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-base md:text-lg mb-1 text-deep-olive">Grooming & Care</h4>
@@ -226,7 +282,9 @@
 
                         <div class="flex gap-3 md:gap-4">
                             <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-sage/15 rounded-xl flex items-center justify-center">
-                                <span class="text-xl md:text-2xl">🌱</span>
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-base md:text-lg mb-1 text-deep-olive">Thoughtful Brands</h4>
@@ -236,7 +294,10 @@
                     </div>
 
                     <div class="pt-4 md:pt-6">
-                        <a href="#buy" class="inline-flex items-center gap-2 bg-deep-olive text-white px-8 md:px-10 py-4 md:py-5 rounded-full text-base md:text-lg font-bold hover:bg-sage transition-all shadow-xl w-full sm:w-auto justify-center">
+                        <a href="https://payhip.com/b/RL5vS" 
+                           class="payhip-buy-button inline-flex items-center gap-2 bg-deep-olive text-white px-8 md:px-10 py-4 md:py-5 rounded-full text-base md:text-lg font-bold hover:bg-sage transition-all shadow-xl w-full sm:w-auto justify-center" 
+                           data-theme="none" 
+                           data-product="RL5vS">
                             Get Instant Access
                         </a>
                     </div>
@@ -244,7 +305,7 @@
             </div>
 
             <!-- Page Preview -->
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-5xl mx-auto scroll-animate">
                 <img src="./images/Page_Preview_Mockups.png" alt="Preview of guide pages" class="w-full shadow-2xl rounded-2xl">
                 <p class="text-center text-sm md:text-base text-soft-charcoal/60 mt-4 md:mt-6 italic">
                     Written to be clear, practical, and easy to use no matter where you're starting
@@ -257,7 +318,7 @@
     <section class="py-16 md:py-24 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center mb-12 md:mb-16">
+            <div class="text-center mb-12 md:mb-16 scroll-animate">
                 <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-deep-olive">
                     What Pet Parents Are Saying
                 </h2>
@@ -269,7 +330,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                 
                 <!-- Testimonial 1 -->
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "This guide helped me understand what to look for instead of just buying what's marketed the loudest. I feel more confident making choices for my dog now."
@@ -278,7 +339,7 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "What I appreciated most is that this wasn't pushing specific products. It taught me how to evaluate what I already have and where upgrades would actually matter."
@@ -287,7 +348,7 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "The guide is straightforward and practical. It gave me a clear starting point without overwhelming me with options. Really helpful for making thoughtful decisions."
@@ -296,7 +357,7 @@
                 </div>
 
                 <!-- Testimonial 4 -->
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "I used to just buy whatever looked good online. This guide helped me understand what quality actually means. Now I look at materials, construction, and brand values before making decisions."
@@ -305,7 +366,7 @@
                 </div>
 
                 <!-- Testimonial 5 -->
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "As a new cat parent, I felt overwhelmed by all the choices. This guide gave me a clear framework for thinking about products. The categories covered everything I needed."
@@ -314,7 +375,7 @@
                 </div>
 
                 <!-- Testimonial 6 -->
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "I've saved money by not replacing things that were already fine. The guide taught me where upgrades truly matter and where I could keep what I had. Really practical advice."
@@ -326,80 +387,128 @@
         </div>
     </section>
 
-    <!-- QUESTIONS SECTION - Concise -->
+    <!-- COMMON QUESTIONS - Accordion FAQ -->
     <section class="py-16 md:py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center mb-10 md:mb-12">
-                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-deep-olive">
-                    Common Questions This Guide Answers
-                </h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
-                <div class="bg-cream rounded-2xl p-6 md:p-8">
-                    <p class="text-base md:text-lg text-soft-charcoal/80">
-                        How do I know if a product is actually well made?
-                    </p>
-                </div>
-
-                <div class="bg-cream rounded-2xl p-6 md:p-8">
-                    <p class="text-base md:text-lg text-soft-charcoal/80">
-                        What materials should I look for or avoid?
-                    </p>
-                </div>
-
-                <div class="bg-cream rounded-2xl p-6 md:p-8">
-                    <p class="text-base md:text-lg text-soft-charcoal/80">
-                        Which upgrades will make the most difference?
-                    </p>
-                </div>
-
-                <div class="bg-cream rounded-2xl p-6 md:p-8">
-                    <p class="text-base md:text-lg text-soft-charcoal/80">
-                        How can I tell if a brand is trustworthy?
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUICK FAQ -->
-    <section class="py-16 md:py-20 bg-warm-beige">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center mb-10 md:mb-12">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-deep-olive">Quick Questions</h2>
+            <div class="text-center mb-10 md:mb-12 scroll-animate">
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-deep-olive">Common Questions</h2>
             </div>
 
-            <div class="space-y-4">
-                <div class="bg-white rounded-2xl p-6 md:p-8">
-                    <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-deep-olive">Do I need to buy specific products?</h3>
-                    <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed">
-                        No. The guide teaches evaluation skills. It includes vetted examples to help you start, but the focus is teaching you to recognize quality yourself.
-                    </p>
+            <div class="space-y-4 scroll-animate">
+                
+                <!-- Question 1 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/50 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">How do I know if a product is actually well made?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            The guide teaches you to look at materials, construction, stress points, and hardware. Products that age well typically have reinforced areas where force concentrates, smooth finishes, and clear information from the brand about how they're made.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 md:p-8">
-                    <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-deep-olive">How do I get the guide?</h3>
-                    <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed">
-                        Instant PDF download after purchase. Read on any device, print it, or save it. It's yours to keep.
-                    </p>
+                <!-- Question 2 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/50 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">What materials should I look for or avoid?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            Different materials work better for different products. The guide explains how common materials like stainless steel, nylon, rubber, and ceramic typically age over time, so you can make informed choices based on how you'll actually use the product.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 md:p-8">
-                    <h3 class="font-bold text-base md:text-lg mb-2 md:mb-3 text-deep-olive">Will this work for my situation?</h3>
-                    <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed">
-                        The guide covers both dogs and cats and works for any budget. Whether you're upgrading everything or just a few items, you'll find practical guidance.
-                    </p>
+                <!-- Question 3 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/50 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">Do I need to buy specific products mentioned in the guide?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            No. The guide teaches evaluation skills and includes some vetted examples to help you start, but the focus is teaching you to recognize quality yourself so you can make confident decisions anywhere.
+                        </p>
+                    </div>
                 </div>
+
+                <!-- Question 4 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/50 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">Which upgrades will make the most difference?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            Items used daily tend to have the biggest impact. The guide helps you prioritize by showing you how to identify what's working well and what's causing frustration, so you can focus on upgrades that actually matter.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/50 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">How can I tell if a brand is trustworthy?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            Thoughtful brands typically share specific information about materials, construction, and care rather than relying on vague claims. The guide shows you what clarity looks like and what red flags to watch for.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/50 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">How do I get the guide after purchase?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            Instant PDF download after purchase. Read on any device, print it, or save it. It's yours to keep and reference whenever you need it.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/50 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">Will this work for my situation?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            The guide covers both dogs and cats and works for any budget. Whether you're upgrading everything or just a few items, you'll find practical guidance that applies to your specific needs.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- FINAL CTA - Clean & Simple -->
-    <section id="buy" class="py-20 md:py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="buy" class="py-20 md:py-24 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
             
             <div class="mb-10 md:mb-12">
                 <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-deep-olive">
@@ -412,18 +521,21 @@
 
             <!-- Guide Visual -->
             <div class="max-w-xs md:max-w-md mx-auto mb-10 md:mb-12">
-                <img src="./images/Guide_Cover_Mockup.png" alt="The Natural Pet Parent Blueprint" class="w-full shadow-2xl rounded-xl">
+                <img src="./images/Ebook_3D_Mockup.png" alt="The Natural Pet Parent Blueprint" class="w-full shadow-2xl rounded-xl">
             </div>
 
             <!-- Simple Price Statement -->
             <div class="mb-8 md:mb-10">
                 <p class="text-base md:text-lg text-soft-charcoal/70 mb-3 md:mb-4">
-                    Get the complete guide with 21 pages of practical guidance for just <span class="font-bold text-deep-olive text-xl md:text-2xl">$9</span>
+                    Get the complete guide with 28 pages of practical guidance for just <span class="font-bold text-deep-olive text-xl md:text-2xl">$9</span>
                 </p>
             </div>
 
             <!-- CTA Button -->
-            <a href="#" class="inline-flex items-center gap-3 bg-deep-olive text-white px-12 md:px-16 py-5 md:py-6 rounded-full text-lg md:text-xl font-bold hover:bg-sage transition-all shadow-2xl hover:shadow-3xl hover:scale-105 mb-6 md:mb-8 w-full sm:w-auto justify-center">
+            <a href="https://payhip.com/b/RL5vS" 
+               class="payhip-buy-button inline-flex items-center gap-3 bg-deep-olive text-white px-12 md:px-16 py-5 md:py-6 rounded-full text-lg md:text-xl font-bold hover:bg-sage transition-all shadow-2xl hover:shadow-3xl hover:scale-105 mb-6 md:mb-8 w-full sm:w-auto justify-center" 
+               data-theme="none" 
+               data-product="RL5vS">
                 Get The Guide Now
                 <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -442,7 +554,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="flex items-center justify-center gap-2 mb-3 md:mb-4">
-                    <span class="text-2xl md:text-3xl">🌿</span>
+                    <img src="./images/Logo_Icon.png" alt="Greenside Paws" class="w-8 h-8">
                     <span class="font-display text-xl md:text-2xl font-bold">Greenside Paws</span>
                 </div>
                 <p class="text-white/70 text-xs md:text-sm mb-4">
@@ -459,13 +571,60 @@
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                 }
             });
         });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // FAQ accordion
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-icon');
+            
+            // Close all other FAQs
+            allAnswers.forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('open');
+                }
+            });
+            allIcons.forEach(item => {
+                if (item !== icon) {
+                    item.classList.remove('rotate');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('open');
+            icon.classList.toggle('rotate');
+        }
     </script>
 </body>
 </html>
