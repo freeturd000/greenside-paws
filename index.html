@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Pet Parent Blueprint - Greenside Paws</title>
-    <meta name="description" content="Learn what's actually in the products your pets use every day. Most aren't tested before they're sold. Some contain ingredients with real evidence of harm.">
+    <meta name="description" content="Some everyday pet products contain harmful hidden toxins that aren't always disclosed.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./images/Logo_Icon_2.png">
@@ -36,23 +36,6 @@
         }
     </script>
     <style>
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .animate-fade-up {
-            animation: fadeUp 0.8s ease-out forwards;
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-        .animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
-        .animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
-        .animate-delay-600 { animation-delay: 0.6s; opacity: 0; }
         html { scroll-behavior: smooth; }
         
         .hero-pattern {
@@ -77,15 +60,6 @@
         .scroll-animate.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .hover-lift {
-            transition: all 0.3s ease;
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .faq-answer {
@@ -134,89 +108,98 @@
         
         <!-- Hero Image as Background -->
         <div class="absolute inset-0 md:right-0 md:left-1/2">
-            <img src="./images/Hero_Lifestyle.png" alt="Happy pet parent with dog" class="w-full h-full object-cover opacity-90">
+            <img src="./images/Hero_Lifestyle.png" alt="Pet parent with dog" class="w-full h-full object-cover opacity-90">
             <div class="absolute inset-0 bg-gradient-to-r from-cream via-cream/60 to-cream/30 md:from-cream md:via-cream/70 md:to-cream/20"></div>
         </div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
             <div class="lg:w-1/2 space-y-6 md:space-y-8">
 
-                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] text-deep-olive animate-fade-up">
-                    Most pet products are sold without real safety review
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] text-deep-olive">
+                    We Do Our Best To Keep Our Pets Healthy
                 </h1>
                 
-                <div class="space-y-4 text-xl md:text-2xl text-soft-charcoal/90 leading-relaxed animate-fade-up animate-delay-200">
-                    <p>We all want to do right by our pets. We read labels. We look for words like "natural" or "non-toxic." We choose products that sound safer.</p>
-                    
-                    <p>What most of us don't realize is that many everyday pet products are never reviewed for long-term safety, ingredient exposure, or material risks.</p>
-                    
-                    <p class="font-semibold text-deep-olive">The Pet Parent Blueprint explains what actually matters when it comes to pet product safety so you're not relying on labels, marketing claims, or guesswork.</p>
-                </div>
+                <p class="text-xl md:text-2xl text-soft-charcoal/90 leading-relaxed">
+                    We read labels. We look for words like "natural" or "non-toxic". We choose products that sound safe.
+                </p>
 
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-5 md:p-6 shadow-xl border border-sage/10 animate-fade-up animate-delay-400">
+		<p class="text-xl md:text-2xl text-soft-charcoal/90 leading-relaxed">
+                    But what most pet owners don't realize is that many everyday pet products are never reviewed for long-term safety, ingredient exposure, or material risks. We read labels. We look for words like "natural" or "non-toxic". We choose products that sound safe.
+                </p>
+
+		<p class="text-xl md:text-2xl text-soft-charcoal/90 leading-relaxed">
+                    And while it's safe to assume most products are safe, you'd be surprised to learn how some everyday products contain harmful hidden toxins that aren't labeled.
+                </p>
+
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl border border-sage/10">
                     <p class="text-base md:text-lg text-soft-charcoal/80 leading-relaxed mb-4">
-                        <strong class="text-deep-olive">29 pages. Research-backed. Practical.</strong>
+                        <strong>The Pet Parent Blueprint</strong> breaks down which ingredients and materials actually matter when it comes to pet safety, so you're not relying on labels or guesswork.
                     </p>
+                    <div class="flex flex-wrap items-center gap-4 text-sm text-soft-charcoal/60">
+                        <span class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"/>
+                                <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
+                            </svg>
+                            29 pages
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-sage" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            Instant download
+                        </span>
+                    </div>
                 </div>
                 
-                <div class="animate-fade-up animate-delay-600">
+                <div>
                     <a href="https://payhip.com/b/RL5vS" 
                        class="payhip-buy-button group bg-deep-olive text-white px-10 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold hover:bg-sage transition-all inline-flex items-center justify-center gap-3 shadow-2xl hover:shadow-3xl hover:scale-105 w-full sm:w-auto" 
                        data-theme="none" 
                        data-product="RL5vS">
-                        Get the Guide for $9
-                        <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        Get The Guide - $9
+                        <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </a>
-                    <p class="text-sm text-soft-charcoal/60 mt-4">Instant PDF download • Lifetime access • No subscription</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: WHY THIS GUIDE EXISTS -->
+    <!-- SECTION 2: PROBLEM STATEMENT -->
     <section class="py-16 md:py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="scroll-animate mb-8 md:mb-10">
-                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-deep-olive">
-                    Why The Pet Parent Blueprint exists
+            <div class="text-center mb-10 md:mb-12 scroll-animate">
+                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-deep-olive">
+                    Most Pet Products Are Sold Without A Safety Review
                 </h2>
             </div>
 
             <div class="space-y-6 text-lg md:text-xl text-soft-charcoal/80 leading-relaxed scroll-animate">
-                <p>Most pet parents assume someone is checking these products before they are sold.</p>
+                <p>It's reasonable to assume the products we buy for our pets go through some saftey review before hitting the shelves.</p>
                 
-                <p>That seems reasonable.</p>
+                <p>In reality, many everyday pet products are sold without ingredient limits, material testing, or pre-market review. Unless a product makes a medical claim or causes obvious harm later, it often isn't reviewed at all.</p>
                 
-                <p>In reality, many pet products are sold without ingredient limits, material testing, or meaningful pre-market safety review unless they make a medical claim.</p>
+                <p>That's why things like lead in ceramic bowls, BPA in plastics, and flame retardants in pet beds still show up on store shelves.</p>
                 
-                <p>This is how things like lead in some ceramic bowls, BPA in certain plastics, flame retardants in pet beds, and undisclosed ingredients in grooming products can still end up on store shelves.</p>
-
-		<p>The problem is not a lack of safe options.</p>
-                
-                <p>The problem is not knowing how to tell which products are safe and which could be harmful.</p>
-                
-                <p class="font-semibold text-deep-olive">This is why The Pet Parent Blueprint was created.</p>
+                <p class="font-semibold text-deep-olive"><strong>The Pet Parent Blueprint</strong> exists to help you understand what to watch for, so you can make informed decisions insted of relying on labels or guesswork.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: WHAT THIS IS -->
+    <!-- SECTION 3: WHAT YOU'LL LEARN -->
     <section class="py-16 md:py-24 bg-cream">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center mb-12 md:mb-16 scroll-animate">
-                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-deep-olive">
-                    What you'll learn inside The Pet Parent Blueprint
+                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-deep-olive">
+                    After Reading This, You'll Know...
                 </h2>
-                <p class="text-lg md:text-xl text-soft-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-                    After reading this, you'll know exactly what to look for.
-                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 scroll-animate">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 scroll-animate">
                 
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                     <div class="flex items-start gap-4">
@@ -225,7 +208,22 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <p class="text-base md:text-lg text-soft-charcoal/80">Which ingredients and materials have documented safety concerns in pets</p>
+                        <div>
+                            <p class="text-base md:text-lg text-soft-charcoal/80 font-medium">Which ingredients have documented toxicity concerns in pets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-sage/15 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-base md:text-lg text-soft-charcoal/80 font-medium">Which materials and coatings deserve closer attention</p>
+                        </div>
                     </div>
                 </div>
 
@@ -236,7 +234,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
                             </svg>
                         </div>
-                        <p class="text-base md:text-lg text-soft-charcoal/80">Which "natural" and "non-toxic" labels are meaningful and when they're not</p>
+                        <div>
+                            <p class="text-base md:text-lg text-soft-charcoal/80 font-medium">What "natural" and "non-toxic" labels actually mean (and when they're meaningless)</p>
+                        </div>
                     </div>
                 </div>
 
@@ -247,7 +247,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                             </svg>
                         </div>
-                        <p class="text-base md:text-lg text-soft-charcoal/80">Where safety considerations differ between dogs and cats</p>
+                        <div>
+                            <p class="text-base md:text-lg text-soft-charcoal/80 font-medium">How safety risks differ between dogs and cats</p>
+                        </div>
                     </div>
                 </div>
 
@@ -258,7 +260,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
                             </svg>
                         </div>
-                        <p class="text-base md:text-lg text-soft-charcoal/80">What to look for when buying bowls, toys, beds, and grooming products</p>
+                        <div>
+                            <p class="text-base md:text-lg text-soft-charcoal/80 font-medium">What to check when buying bowls, toys, beds, and grooming products</p>
+                        </div>
                     </div>
                 </div>
 
@@ -266,46 +270,36 @@
                     <div class="flex items-start gap-4">
                         <div class="flex-shrink-0 w-12 h-12 bg-sage/15 rounded-xl flex items-center justify-center">
                             <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
                             </svg>
                         </div>
-                        <p class="text-base md:text-lg text-soft-charcoal/80">How to quickly evaluate products without hours of research</p>
+                        <div>
+                            <p class="text-base md:text-lg text-soft-charcoal/80 font-medium">Simple checklists you can reference while shopping</p>
+                        </div>
                     </div>
                 </div>
 
-            </div>
-
-            <div class="text-center mt-12 scroll-animate">
-                <p class="text-lg md:text-xl text-soft-charcoal/70 leading-relaxed max-w-2xl mx-auto">
-                    The goal is to make informed choices when it comes to the health of your pets.
-                </p>
             </div>
         </div>
     </section>
 
     <!-- SECTION 4: REASSURANCE -->
     <section class="py-16 md:py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <div class="text-center mb-12 md:mb-16 scroll-animate">
-                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-deep-olive">
-                    Most of what you already own is probably fine
+            <div class="scroll-animate mb-10 md:mb-12">
+                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-deep-olive">
+                    While Most Pet Products Are Safe
                 </h2>
             </div>
 
-            <div class="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-soft-charcoal/70 leading-relaxed text-center scroll-animate">
-                <p>This guide is not here to convince you that everything is dangerous.</p>
-                
-                <p>It is here to help you understand the small number of things that come up again and again so you can make smarter decisions going forward.</p>
-                
-                <p>Once you know what to look for, a lot of the worry fades away.</p>
-                
-                <p class="font-semibold text-deep-olive">That alone makes shopping easier.</p>
+            <div class="space-y-6 text-lg md:text-xl text-soft-charcoal/70 leading-relaxed scroll-animate max-w-3xl mx-auto">
+                <p>The problem isn't that everything is dangerous. It's that the few things that do matter are buried in clever marketing and vague labels. This guide cuts through the bs so you know exactly what to look for.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 5: HOW PEOPLE USE IT -->
+    <!-- SECTION 5: HOW TO USE -->
     <section class="py-16 md:py-24 bg-cream">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -319,26 +313,16 @@
                 <!-- Right: Copy -->
                 <div class="space-y-6 scroll-animate">
                     <h2 class="font-display text-3xl md:text-4xl font-bold text-deep-olive">
-                        How people actually use The Pet Parent Blueprint
+                        A Practical Reference You Can Reuse
                     </h2>
                     
                     <p class="text-lg md:text-xl text-soft-charcoal/80 leading-relaxed">
-                        The Pet Parent Blueprint is designed to be practical, not overwhelming.
+                        <strong>The Pet Parent Blueprint</strong> is designed to be practical, not overwhelming. 
                     </p>
                     
                     <p class="text-lg md:text-xl text-soft-charcoal/80 leading-relaxed">
-                        Most people read it in one sitting.
+                        It's 29 pages. You can read it in one sitting, then keep it on your phone or computer for whenever you need it.
                     </p>
-                    
-                    <p class="text-lg md:text-xl text-soft-charcoal/80 leading-relaxed">
-                        After that, they keep it saved on their phone or computer and refer back to it when they're:
-                    </p>
-                    
-                    <ul class="space-y-3 text-lg md:text-xl text-soft-charcoal/80 leading-relaxed pl-6">
-                        <li>• In a pet store reading labels</li>
-                        <li>• Comparing products online</li>
-                        <li>• Wondering whether something is worth replacing or not</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -346,34 +330,22 @@
 
     <!-- SECTION 6: WHO IT'S FOR -->
     <section class="py-16 md:py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <div class="text-center mb-10 md:mb-12 scroll-animate">
-                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-10 text-deep-olive">
-                    This guide is a good fit if you:
+            <div class="scroll-animate mb-10 md:mb-12">
+                <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-deep-olive">
+                    This Guide Is Perfect for You If You...
                 </h2>
             </div>
 
-            <div class="space-y-4 text-lg md:text-xl text-soft-charcoal/80 leading-relaxed max-w-2xl mx-auto scroll-animate">
-                <p>• Care deeply about your pets and want to make thoughtful choices</p>
+            <div class="space-y-6 text-lg md:text-xl text-soft-charcoal/80 leading-relaxed scroll-animate max-w-2xl mx-auto">
+                <p>Want the absolute best for your pets.</p>
                 
-                <p>• Want to avoid unnecessary exposure for your pets</p>
+                <p>Want to avoid unecessary toxin exposure to your pets.</p>
                 
-                <p>• Have ever read a label and still felt unsure</p>
+                <p>Read product labels.</p>
                 
-                <p>• Want to feel more confident when shopping</p>
-            </div>
-
-            <div class="text-center mt-16 mb-10 scroll-animate">
-                <h3 class="font-display text-2xl md:text-3xl font-bold mb-8 text-deep-olive">
-                    This guide is probably not for you if:
-                </h3>
-            </div>
-
-            <div class="space-y-4 text-lg md:text-xl text-soft-charcoal/80 leading-relaxed max-w-2xl mx-auto scroll-animate">
-                <p>• You're looking for medical advice</p>
-                
-                <p>• You expect a list of approved brands rather than learning how to evaluate products yourself</p>
+                <p>Want to feel confident shopping for your pet.</p>
             </div>
         </div>
     </section>
@@ -384,14 +356,14 @@
             
             <div class="text-center mb-12 md:mb-16 scroll-animate">
                 <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-deep-olive">
-                    What other pet parents are saying
+                    What Pet Parents Are Saying
                 </h2>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                 
                 <!-- Testimonial 1 -->
-                <div class="bg-cream rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "I had no idea some of the products I was using could be harmful. This guide opened my eyes without making me feel like a bad pet parent."
@@ -400,7 +372,7 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="bg-cream rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
                         "The checklists are perfect. I keep them on my phone while shopping."
@@ -409,37 +381,37 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="bg-cream rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
-                        "I was buying 'natural' products thinking they were safer. This guide showed me what to actually look for."
+                        "I was buying 'natural' products thinking they were safer. This showed me what to actually look for."
                     </p>
                     <p class="text-soft-charcoal/60 text-sm font-medium">— David K.</p>
                 </div>
 
                 <!-- Testimonial 4 -->
-                <div class="bg-cream rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
-                        "I already avoided buying things I would have wasted money on."
+                        "Helped me understand what actually matters and the things I can stop stressing about."
                     </p>
                     <p class="text-soft-charcoal/60 text-sm font-medium">— Amanda L.</p>
                 </div>
 
                 <!-- Testimonial 5 -->
-                <div class="bg-cream rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
-                        "Clear, practical, and actually helpful."
+                        "Best $9 I've spent. Already avoided buying three products that would've been a waste."
                     </p>
                     <p class="text-soft-charcoal/60 text-sm font-medium">— Jennifer C.</p>
                 </div>
 
                 <!-- Testimonial 6 -->
-                <div class="bg-cream rounded-2xl p-6 md:p-8 shadow-lg hover-lift scroll-animate">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg scroll-animate">
                     <div class="text-sage text-xl md:text-2xl mb-4">⭐⭐⭐⭐⭐</div>
                     <p class="text-soft-charcoal/80 leading-relaxed mb-4 text-sm md:text-base">
-                        "Best $9 I've spent on my pets. Worth it just for the peace of mind."
+                        "This paid for itself the first time I used it. Clear and actually helpful."
                     </p>
                     <p class="text-soft-charcoal/60 text-sm font-medium">— Michael R.</p>
                 </div>
@@ -453,7 +425,7 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center mb-10 md:mb-12 scroll-animate">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-deep-olive">Common questions</h2>
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-deep-olive">Common Questions</h2>
             </div>
 
             <div class="space-y-4 scroll-animate">
@@ -461,7 +433,22 @@
                 <!-- Question 1 -->
                 <div class="bg-cream rounded-2xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/30 transition-colors">
-                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">Does this apply to both dogs and cats?</h3>
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">How long is the guide?</h3>
+                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 md:px-8">
+                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
+                            29 pages. You can read it in one sitting. Then reference it whenever you need it.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-cream rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/30 transition-colors">
+                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">Does this work for both dogs and cats?</h3>
                         <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
@@ -473,7 +460,7 @@
                     </div>
                 </div>
 
-                <!-- Question 2 -->
+                <!-- Question 3 -->
                 <div class="bg-cream rounded-2xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/30 transition-colors">
                         <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">Is this medical advice?</h3>
@@ -488,36 +475,6 @@
                     </div>
                 </div>
 
-                <!-- Question 3 -->
-                <div class="bg-cream rounded-2xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/30 transition-colors">
-                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">How long is the guide?</h3>
-                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div class="faq-answer px-6 md:px-8">
-                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
-                            29 pages. Clear and focused.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="bg-cream rounded-2xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-warm-beige/30 transition-colors">
-                        <h3 class="font-bold text-base md:text-lg text-deep-olive pr-4">How do I get it?</h3>
-                        <svg class="faq-icon w-6 h-6 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div class="faq-answer px-6 md:px-8">
-                        <p class="text-sm md:text-base text-soft-charcoal/70 leading-relaxed pb-6 md:pb-8">
-                            You receive an instant PDF download after purchase.
-                        </p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -528,16 +485,13 @@
             
             <div class="mb-10 md:mb-12">
                 <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-deep-olive">
-                    The next time you buy something for your pet, you don't have to guess
+                    The Next Time You Buy Something for Your Pet
                 </h2>
-                <p class="text-lg md:text-xl text-soft-charcoal/70 leading-relaxed max-w-2xl mx-auto mb-6">
-                    For $9, The Pet Parent Blueprint gives you a clear framework you can reuse every time you shop. It helps you make informed decisions without relying on vague labels.
+                <p class="text-lg md:text-xl text-soft-charcoal/70 leading-relaxed max-w-2xl mx-auto mb-4">
+                    You can trust the label and hope it's fine. Or you can make confident decisions knowing exactly what to look for.
                 </p>
                 <p class="text-lg md:text-xl text-soft-charcoal/70 leading-relaxed max-w-2xl mx-auto">
-                    While the companies selling these products won't ever explain this to you.
-                </p>
-                <p class="text-lg md:text-xl text-deep-olive font-semibold leading-relaxed max-w-2xl mx-auto">
-                    This guide does.
+                    For $9, you get a guide you will reference for years and peace of mind when choosing products for your pet.
                 </p>
             </div>
 
@@ -546,12 +500,18 @@
                 <img src="./images/Ebook_3D_Mockup.png" alt="The Pet Parent Blueprint" class="w-full shadow-2xl rounded-xl">
             </div>
 
+            <div class="mb-8 md:mb-10">
+                <p class="text-base md:text-lg text-soft-charcoal/70 mb-4">
+                    The companies making these products aren't going to educate you. This guide does.
+                </p>
+            </div>
+
             <!-- CTA Button -->
             <a href="https://payhip.com/b/RL5vS" 
                class="payhip-buy-button inline-flex items-center gap-3 bg-deep-olive text-white px-12 md:px-16 py-5 md:py-6 rounded-full text-lg md:text-xl font-bold hover:bg-sage transition-all shadow-2xl hover:shadow-3xl hover:scale-105 mb-6 md:mb-8 w-full sm:w-auto justify-center" 
                data-theme="none" 
                data-product="RL5vS">
-                Get the Guide for $9
+                Get The Guide Now ($9)
                 <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                 </svg>
